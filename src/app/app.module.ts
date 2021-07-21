@@ -9,7 +9,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServicesComponent } from './services/services.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, ServicesComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    ServicesComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
