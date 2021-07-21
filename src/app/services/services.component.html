@@ -1,4 +1,11 @@
 <main class="flex-grow mb-20">
   <h1 class="text-5xl md:text-6xl font-bold text-center">Available Services</h1>
   <br />
+
+  <h2>Services</h2>
+  <div *ngFor="let service of services">
+    <mat-checkbox [(ngModel)]="service.checked">
+      {{ service.name }} (${{ service.price.toFixed(2) }})
+    </mat-checkbox>
+  </div>
 </main>

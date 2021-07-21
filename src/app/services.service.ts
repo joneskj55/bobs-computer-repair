@@ -1,3 +1,12 @@
+/*
+============================================
+; Title:  services.service.ts
+; Author: Kevin Jones
+; Date: 21 July 2021
+; Description: Services service file
+;===========================================
+*/
+
 import { Injectable } from '@angular/core';
 import { IService } from './service.interface';
 
@@ -12,7 +21,7 @@ export class ServicesService {
     this.services = [
       {
         name: 'Password Reset',
-        price: '39.99',
+        price: 39.99,
         checked: false,
       },
       {
@@ -37,7 +46,7 @@ export class ServicesService {
       },
       {
         name: 'Keyboard Cleaning',
-        price: 45.00,
+        price: 45.0,
         checked: false,
       },
       {
@@ -46,9 +55,9 @@ export class ServicesService {
         checked: false,
       },
     ];
-
-    // get the list of services
-    getServices() {
-      return this.services;
+  }
+  // get the list of services
+  getServices() {
+    return this.services;
   }
 }
