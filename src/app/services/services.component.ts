@@ -24,5 +24,12 @@ export class ServicesComponent implements OnInit {
     this.services = servicesService.getServices();
   }
 
+  // clear checkboxes
+  clearCheckboxes(): void {
+    this.services.forEach((service: IService) => {
+      service.checked = false;
+    });
+  }
+
   ngOnInit(): void {}
 }
