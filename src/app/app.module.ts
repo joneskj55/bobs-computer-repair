@@ -15,13 +15,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
+import { InvoiceComponent } from './invoice/invoice.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AboutComponent,
     ServicesComponent,
+    InvoiceComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { FormsModule } from '@angular/forms';
     MatCheckboxModule,
     MatIconModule,
     FormsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
