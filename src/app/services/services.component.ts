@@ -18,6 +18,8 @@ import { ServicesService } from '../services.service';
 })
 export class ServicesComponent implements OnInit {
   services: Array<IService>; // services array
+  parts: number;
+  hours: number;
 
   // get services from services.service
   constructor(private servicesService: ServicesService) {
@@ -29,6 +31,23 @@ export class ServicesComponent implements OnInit {
     this.services.forEach((service: IService) => {
       service.checked = false;
     });
+  }
+
+  // clear inputs
+  clearInputs(): void {
+    this.parts = 0;
+    this.hours = 0;
+  }
+
+  // calculate total cost
+  calculateTotalCost(): number {
+    let totalCost = 0;
+    this.services.forEach((service: IService) => {
+      if (service.checked) {
+        totalCost += service.price;
+      }
+    });
+    return totalCost;
   }
 
   ngOnInit(): void {}
