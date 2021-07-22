@@ -24,6 +24,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     AboutComponent,
     ServicesComponent,
     InvoiceComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
