@@ -100,15 +100,12 @@ export class ServicesComponent implements OnInit {
       width: '800px',
     });
 
-    // Subscribe to dialog state
+    // subscribe to dialog state
     dialogRef.afterClosed().subscribe((result) => {
       if (result === 'confirm') {
         this.clearInputs();
         this.clearCheckboxes();
       }
-      // if (result === 'cancel') {
-      //   this.resetCalculatedValues();
-      // }
     });
   }
 }

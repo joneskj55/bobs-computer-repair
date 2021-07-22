@@ -1,44 +1,77 @@
-<!-- Invoice Modal -->
-<div class="btn-right">
+<!--
+============================================
+; Title:  invoice.component.html
+; Author: Kevin Jones
+; Date: 22 July 2021
+; Description: Invoice component HTML file
+;===========================================
+ -->
+
+<!-- close button -->
+<div style="text-align: right">
   <button mat-icon-button matDialogClose="cancel">
-    <mat-icon color="secondary">close</mat-icon>
+    <mat-icon>close</mat-icon>
   </button>
 </div>
 
-<div class="invoice-title">Invoice Summary</div>
+<!-- summary  -->
+<div class="font-bold">Invoice Summary</div>
 <hr />
-<div class="invoice-content">
-  <!-- price per services -->
-  <div *ngFor="let service of services" class="invoice-row">
-    <div class="service">
+<br />
+Date: {{ today | date }}
+
+<!-- list of services -->
+<div>
+  <br />
+  <div *ngFor="let service of services">
+    <div>
       {{ service.name }}
+      <div style="float: right">{{ service.price | currency }}</div>
     </div>
-    <div class="price">${{ service.price.toFixed(2) }}</div>
   </div>
-  <div class="invoice-custom">
-    <!-- Input price for parts -->
-    <div class="invoice-row" *ngIf="parts">
-      <div class="service">Parts</div>
-      <div class="price">${{ parts.toFixed(2) }}</div>
-    </div>
-    <div class="invoice-row" *ngIf="totalWithService">
-      <!-- Input Labor Hours -->
-      <div class="service">
-        Labor
-        <span class="custom-service-calc">({{ hours }} ⨉ 50)</span>
+  <br />
+
+  <!-- parts -->
+  <div>
+    <div *ngIf="parts">
+      <div>
+        Parts
+        <div style="float: right">{{ parts | currency }}</div>
       </div>
-      <div class="price">${{ totalWithService.toFixed(2) }}</div>
+    </div>
+
+    <!-- labor -->
+    <div *ngIf="totalWithService">
+      <div>
+        Labor
+        <div style="float: right">{{ totalWithService | currency }}</div>
+      </div>
     </div>
   </div>
-  <!-- Total Price -->
-  <div class="invoice-row invoice-total" *ngIf="total">
-    <div class="service">Total Charges</div>
-    <div class="price">${{ total.toFixed(2) }}</div>
+  <br />
+
+  <!-- total -->
+  <div *ngIf="total">
+    <div>
+      Total Charges
+      <div style="float: right">{{ total | currency }}</div>
+    </div>
   </div>
 </div>
-<div class="btn-right">
-  <!-- Make dialog available for print -->
-  <button mat-stroked-button color="accent" onClick="window.print()">
-    <mat-icon color="secondary">print</mat-icon> Print
+<br />
+
+<!-- print -->
+<div style="text-align: right">
+  <button
+    class="
+      border-solid border border-gray-300
+      rounded
+      py-2
+      px-4
+      hover:bg-gray-100
+    "
+    onClick="window.print()"
+  >
+    <i class="fas fa-print"></i> Print
   </button>
 </div>

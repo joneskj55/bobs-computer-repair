@@ -19,6 +19,7 @@ import { IService } from '../service.interface';
 })
 export class InvoiceComponent implements OnInit {
   services: Array<IService>;
+  today: Date;
   parts: number;
   hours: number;
   total: number;
@@ -28,9 +29,10 @@ export class InvoiceComponent implements OnInit {
     private dialogRef: MatDialogRef<InvoiceComponent>,
     @Inject(MAT_DIALOG_DATA) data: any
   ) {
-    // make payload available for the invoice dialog component
-    const { services, parts, hours, total, totalWithService } = data;
+    // invoice modal values
+    const { services, today, parts, hours, total, totalWithService } = data;
     this.services = services;
+    this.today = new Date();
     this.parts = parseFloat(parts);
     this.hours = parseFloat(hours);
     this.total = parseFloat(total);
