@@ -23,11 +23,12 @@
         "
       >
         <div class="flex flex-col">
+          <!-- services -->
           <h2 class="font-bold">Services</h2>
           <br />
           <div *ngFor="let service of services">
             <mat-checkbox [(ngModel)]="service.checked">
-              {{ service.name }} (${{ service.price.toFixed(2) }})
+              {{ service.name }} ({{ service.price | currency }})
             </mat-checkbox>
           </div>
           <br />
@@ -35,6 +36,7 @@
           {{ calculateTotalServices() | currency }}
         </div>
         <div class="flex flex-col">
+          <!-- fees -->
           <h2 class="font-bold">Standard Fees</h2>
           <br />
           <div>
