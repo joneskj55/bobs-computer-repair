@@ -11,30 +11,92 @@
   <h1 class="text-5xl md:text-6xl font-bold text-center">Available Services</h1>
   <br />
 
-  <h2>Services</h2>
-  <div *ngFor="let service of services">
-    <mat-checkbox [(ngModel)]="service.checked">
-      {{ service.name }} (${{ service.price.toFixed(2) }})
-    </mat-checkbox>
+  <div class="container mx-auto px-6 pt-10">
+    <div class="sm:flex sm:mt-8">
+      <div
+        class="
+          mt-8
+          sm:mt-0 sm:w-full sm:px-8
+          flex flex-col
+          md:flex-row
+          justify-around
+        "
+      >
+        <div class="flex flex-col">
+          <br />
+
+          <h2>Services</h2>
+          <div *ngFor="let service of services">
+            <mat-checkbox [(ngModel)]="service.checked">
+              {{ service.name }} (${{ service.price.toFixed(2) }})
+            </mat-checkbox>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <h3>Standard Fees</h3>
+          <br />
+          <div>
+            <mat-form-field fxFlex appearance="fill">
+              <mat-label>Parts</mat-label>
+              <mat-icon matPrefix>attach_money</mat-icon>
+
+              <input
+                type="text"
+                name="txtPart"
+                id="txtPart"
+                matInput
+                type="number"
+              />
+              <button mat-button matSuffix mat-icon-button aria-label="Clear">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field fxFlex appearance="fill">
+              <mat-label>Hours of Labor @ $50.00</mat-label>
+              <mat-icon matPrefix>access_time</mat-icon>
+              <input
+                type="text"
+                name="txtHour"
+                id="txtHour"
+                matInput
+                type="number"
+              />
+              <button mat-button matSuffix mat-icon-button aria-label="Clear">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+          <button
+            class="
+              bg-red-600
+              hover:bg-red-700
+              text-white
+              font-bold
+              py-2
+              px-4
+              rounded
+            "
+            (click)="clearCheckboxes()"
+          >
+            Clear
+          </button>
+          <button
+            class="
+              bg-green-600
+              hover:bg-green-700
+              text-white
+              font-bold
+              py-2
+              px-4
+              rounded
+            "
+          >
+            Calculate
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-  <h2>Standard Fees</h2>
-  <button
-    class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-    (click)="clearCheckboxes()"
-  >
-    Clear
-  </button>
-  <button
-    class="
-      bg-green-600
-      hover:bg-green-700
-      text-white
-      font-bold
-      py-2
-      px-4
-      rounded
-    "
-  >
-    Calculate
-  </button>
 </main>
