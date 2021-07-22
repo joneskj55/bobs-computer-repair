@@ -23,9 +23,8 @@
         "
       >
         <div class="flex flex-col">
+          <h2 class="font-bold">Services</h2>
           <br />
-
-          <h2>Services</h2>
           <div *ngFor="let service of services">
             <mat-checkbox [(ngModel)]="service.checked">
               {{ service.name }} (${{ service.price.toFixed(2) }})
@@ -33,7 +32,7 @@
           </div>
         </div>
         <div class="flex flex-col">
-          <h3>Standard Fees</h3>
+          <h2 class="font-bold">Standard Fees</h2>
           <br />
           <div>
             <mat-form-field fxFlex appearance="fill">
@@ -68,6 +67,7 @@
               </button>
             </mat-form-field>
           </div>
+
           <button
             class="
               bg-red-600
@@ -80,8 +80,8 @@
             "
             (click)="clearCheckboxes()"
           >
-            Clear
-          </button>
+            Clear</button
+          ><br />
           <button
             class="
               bg-green-600
