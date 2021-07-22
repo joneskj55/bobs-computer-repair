@@ -32,7 +32,7 @@
           </div>
           <br />
           <h2 class="font-bold">Services Total:</h2>
-          {{ calculateTotalCost() | currency }}
+          {{ calculateTotalServices() | currency }}
         </div>
         <div class="flex flex-col">
           <h2 class="font-bold">Standard Fees</h2>
@@ -92,7 +92,8 @@
               px-4
               rounded
             "
-            (click)="calculateTotalCost()"
+            (click)="calculateTotalServices()"
+            (click)="calculatePartsAndHours()"
           >
             Calculate
           </button>
