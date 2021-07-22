@@ -17,10 +17,24 @@
       {{ service.name }} (${{ service.price.toFixed(2) }})
     </mat-checkbox>
   </div>
+  <h2>Standard Fees</h2>
   <button
-    class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+    class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
     (click)="clearCheckboxes()"
   >
     Clear
+  </button>
+  <button
+    class="
+      bg-green-600
+      hover:bg-green-700
+      text-white
+      font-bold
+      py-2
+      px-4
+      rounded
+    "
+  >
+    Calculate
   </button>
 </main>
