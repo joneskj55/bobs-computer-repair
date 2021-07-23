@@ -21,4 +21,48 @@ describe('ServicesComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // test that clearButton calls clearCheckboxes()
+  it('should', fakeAsync(() => {
+    spyOn(component, 'clearCheckboxes');
+
+    let button =
+      fixture.debugElement.nativeElement.getElementById('clearButton');
+    button.click();
+    tick();
+    expect(component.clearCheckboxes).toHaveBeenCalled();
+  }));
+
+  // test that clearButton calls clearInputs()
+  it('should', fakeAsync(() => {
+    spyOn(component, 'clearInputs');
+
+    let button =
+      fixture.debugElement.nativeElement.getElementById('clearButton');
+    button.click();
+    tick();
+    expect(component.clearInputs).toHaveBeenCalled();
+  }));
+
+  // test that calculateButton calls calculateTotalServices()
+  it('should', fakeAsync(() => {
+    spyOn(component, 'calculateTotalServices');
+
+    let button =
+      fixture.debugElement.nativeElement.getElementById('calculateButton');
+    button.click();
+    tick();
+    expect(component.calculateTotalServices).toHaveBeenCalled();
+  }));
+
+  // test that calculateButton calls calculatePartsAndHours()
+  it('should', fakeAsync(() => {
+    spyOn(component, 'calculatePartsAndHours');
+
+    let button =
+      fixture.debugElement.nativeElement.getElementById('calculateButton');
+    button.click();
+    tick();
+    expect(component.calculatePartsAndHours).toHaveBeenCalled();
+  }));
 });
