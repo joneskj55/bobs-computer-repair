@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  services.component.spec.ts
+; Author: Angular CLI
+; Modified by: Kevin Jones
+; Date: 23 July 2021
+; Description: Services component unit test
+;===========================================
+*/
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ServicesComponent } from './services.component';
