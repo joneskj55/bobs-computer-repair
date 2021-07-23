@@ -41,13 +41,12 @@
           <br />
           <div>
             <mat-form-field fxFlex appearance="fill">
-              <mat-label>Parts</mat-label>
+              <mat-label>Cost of Parts</mat-label>
               <mat-icon matPrefix>attach_money</mat-icon>
-
               <input
                 type="text"
-                name="txtPart"
-                id="txtPart"
+                name="part"
+                id="part"
                 matInput
                 type="number"
                 [(ngModel)]="parts"
@@ -60,8 +59,8 @@
               <mat-icon matPrefix>access_time</mat-icon>
               <input
                 type="text"
-                name="txtHour"
-                id="txtHour"
+                name="hours"
+                id="hours"
                 matInput
                 type="number"
                 [(ngModel)]="hours"
