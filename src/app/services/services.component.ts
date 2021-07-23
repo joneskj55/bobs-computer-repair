@@ -75,7 +75,7 @@ export class ServicesComponent implements OnInit {
         total = total + service.price;
       }
     });
-    console.log(total.toFixed(2));
+
     if (!!total) {
       this.total = total;
       this.showInvoice();
