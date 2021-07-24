@@ -24,20 +24,20 @@
       >
         <div class="flex flex-col">
           <!-- services -->
-          <h2 class="font-bold">Services</h2>
-          <br />
+          <h2 class="font-bold mb-6">Services</h2>
+
           <div *ngFor="let service of services">
             <mat-checkbox [(ngModel)]="service.checked">
               {{ service.name }} ({{ service.price | currency }})
             </mat-checkbox>
           </div>
-          <br />
-          <h2 class="font-bold">Services Total:</h2>
+
+          <h2 class="font-bold mt-6">Services Total:</h2>
           {{ calculateTotalServices() | currency }}
         </div>
         <div class="flex flex-col">
           <!-- fees -->
-          <h2 class="font-bold">Standard Fees</h2>
+          <h2 class="font-bold mb-2">Standard Fees</h2>
           <br />
           <div>
             <mat-form-field fxFlex appearance="fill">
@@ -78,12 +78,13 @@
               py-2
               px-4
               rounded
+              mb-2
             "
             (click)="clearCheckboxes()"
             (click)="clearInputs()"
           >
-            Clear</button
-          ><br />
+            Clear
+          </button>
           <button
             id="calculateButton"
             class="
