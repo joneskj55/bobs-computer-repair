@@ -18,12 +18,12 @@ import { IService } from '../service.interface';
   styleUrls: ['./invoice.component.css'],
 })
 export class InvoiceComponent implements OnInit {
-  services: Array<IService>;
-  today: Date;
-  parts: number;
-  hours: number;
-  total: number;
-  totalWithService: number;
+  services: Array<IService>; // services array
+  today: Date; // today's date
+  parts: number; // parts
+  hours: number; // hours
+  total: number; // total
+  totalWithService: number; // hourly rate
 
   constructor(
     private dialogRef: MatDialogRef<InvoiceComponent>,

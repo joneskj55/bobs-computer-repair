@@ -20,10 +20,10 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class ServicesComponent implements OnInit {
   services: Array<IService>; // services array
-  parts: number; // get parts tally
-  hours: number; // get hours tally
-  total: number; // get total parts & hours
-  totalWithService: number; // get hourly rate
+  parts: number; // parts tally
+  hours: number; // hours tally
+  total: number; // total parts & hours
+  totalWithService: number; // hourly rate
 
   // get services from services.service
   constructor(
