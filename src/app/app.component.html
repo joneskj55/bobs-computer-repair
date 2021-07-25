@@ -13,6 +13,7 @@
     top-0
     mx-auto
     p-5
+    md:p-4
     font-sans
     flex
     justify-between
@@ -32,7 +33,9 @@
     ><i class="fas fa-laptop text-2xl text-white hover:text-gray-300"></i
   ></a>
   <div>
-    <a class="text-2xl no-underline text-white">Bob's Computer Repair</a>
+    <a class="sm:text-xs md:text-2xl no-underline text-white"
+      >Bob's Computer Repair</a
+    >
   </div>
   <ul class="flex flex-row">
     <!-- <a
@@ -42,7 +45,14 @@
     > -->
     <a
       routerLink="/about"
-      class="pr-5 text-lg no-underline text-white hover:text-gray-300"
+      class="
+        pr-5
+        sm:text-xs
+        md:text-lg
+        no-underline
+        text-white
+        hover:text-gray-300
+      "
       >About</a
     >
   </ul>
